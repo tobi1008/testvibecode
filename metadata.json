@@ -1,0 +1,6 @@
+{
+  "name": "CloudOps - Dịch Vụ DevOps & Hạ Tầng Cloud",
+  "description": "Giải pháp DevOps toàn diện: Kubernetes Deployment, CI/CD Automation, Cloud Infrastructure, Docker và Quản trị hạ tầng 24/7.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

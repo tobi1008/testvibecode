@@ -1,0 +1,1278 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>CloudOps - Dịch Vụ DevOps &amp; Hạ Tầng Cloud</title>
+    <meta name="title" content="CloudOps - Dịch Vụ DevOps &amp; Hạ Tầng Cloud" />
+    <meta name="description" content="Giải pháp DevOps toàn diện: Kubernetes Deployment, CI/CD Automation, Cloud Infrastructure, Docker và Quản trị hạ tầng 24/7." />
+    <meta name="keywords" content="DevOps, Kubernetes, CI/CD, Cloud Infrastructure, AWS, Docker, Terraform, Ansible, Giám sát hệ thống, Tự động hóa" />
+    <meta name="author" content="CloudOps Engineering" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cloudops.dev" />
+    <meta property="og:title" content="CloudOps - Dịch Vụ DevOps &amp; Hạ Tầng Cloud" />
+    <meta property="og:description" content="Giải pháp DevOps toàn diện: Kubernetes Deployment, CI/CD Automation, Cloud Infrastructure, Docker và Quản trị hạ tầng 24/7." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://cloudops.dev" />
+    <meta name="twitter:title" content="CloudOps - Automate. Scale. Secure." />
+    <meta name="twitter:description" content="Giải pháp DevOps toàn diện giúp doanh nghiệp triển khai, vận hành và mở rộng hệ thống nhanh hơn, an toàn hơn." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop" />
+
+    <!-- Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2306B6D4'><path d='M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM10 17l-3.5-3.5 1.41-1.41L10 14.17l5.59-5.59L17 10l-7 7z'/></svg>" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Header / Sticky Navigation -->
+    <header class="header" id="header">
+      <div class="container nav-container">
+        <a href="#hero" class="logo" id="brand-logo" aria-label="CloudOps Homepage">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="logo-text">Cloud<span>Ops</span></div>
+        </a>
+
+        <nav class="nav-menu" id="nav-menu">
+          <a href="#services" class="nav-link">Dịch Vụ</a>
+          <a href="#tech-stack" class="nav-link">Công Nghệ</a>
+          <a href="#why-us" class="nav-link">Ưu Điểm</a>
+          <a href="#process" class="nav-link">Quy Trình</a>
+          <a href="#testimonials" class="nav-link">Đánh Giá</a>
+          <a href="#pricing" class="nav-link">Bảng Giá</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#contact" class="btn btn-primary mobile-cta" style="display: none;">Liên Hệ Tư Vấn</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-primary" id="header-cta-btn">
+            <span>Tư Vấn Ngay</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <button class="menu-toggle" id="menu-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main>
+      <!-- ================= 1. HERO SECTION ================= -->
+      <section class="hero-section" id="hero">
+        <canvas id="particle-canvas"></canvas>
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content fade-in-up">
+              <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                <span>DevOps &amp; Cloud Infrastructure Architecture</span>
+              </div>
+              <h1 class="hero-title">
+                Automate. Scale. <span class="text-gradient">Secure.</span>
+              </h1>
+              <p class="hero-desc">
+                Chúng tôi cung cấp giải pháp DevOps toàn diện giúp doanh nghiệp triển khai, vận hành và mở rộng hệ thống nhanh hơn, an toàn hơn với độ sẵn sàng 99.99%.
+              </p>
+              <div class="hero-cta-group">
+                <a href="#contact" class="btn btn-primary" id="hero-contact-btn">
+                  <span>Liên hệ tư vấn</span>
+                  <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <a href="#services" class="btn btn-secondary" id="hero-services-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                  <span>Xem dịch vụ</span>
+                </a>
+              </div>
+              <div class="hero-trust">
+                <div class="trust-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                  <span>Bảo mật SOC 2 Type II</span>
+                </div>
+                <div class="trust-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Cam kết SLA 99.99%</span>
+                </div>
+                <div class="trust-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Hỗ trợ 24/7/365</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Terminal Visual & Floating Badges -->
+            <div class="hero-visual fade-in-up delay-2">
+              <div class="floating-badge badge-k8s">
+                <div class="badge-icon blue">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M12 3v18M3 12h18"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div style="color: #ffffff;">Kubernetes v1.31</div>
+                  <div style="font-size: 0.72rem; color: #34d399;">Cluster Healthy</div>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-uptime">
+                <div class="badge-icon green">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div style="color: #ffffff;">99.99% Uptime</div>
+                  <div style="font-size: 0.72rem; color: #94a3b8;">Real-time Monitoring</div>
+                </div>
+              </div>
+
+              <div class="terminal-card">
+                <div class="terminal-header">
+                  <div class="terminal-controls">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                  </div>
+                  <span class="terminal-title">cloudops-pipeline.sh &mdash; bash</span>
+                  <span style="font-size: 0.75rem; color: #64748b;">live-prod</span>
+                </div>
+                <div class="terminal-body">
+                  <div class="term-line">
+                    <span class="term-prompt">$</span>
+                    <span class="term-cmd">terraform apply -auto-approve</span>
+                  </div>
+                  <div class="term-output">
+                    Plan: 8 to add, 0 to change, 0 to destroy.
+                  </div>
+                  <div class="term-output term-success">
+                    Apply complete! Resources: 8 added, 0 updated.
+                  </div>
+                  <div class="term-line" style="margin-top: 0.8rem;">
+                    <span class="term-prompt">$</span>
+                    <span class="term-cmd">docker build -t app:v2.4.0 --push .</span>
+                  </div>
+                  <div class="term-output">
+                    Building image container... <span class="term-tag pass">SHA256:8f419c OK</span>
+                  </div>
+                  <div class="term-line" style="margin-top: 0.8rem;">
+                    <span class="term-prompt">$</span>
+                    <span class="term-cmd">kubectl rollout status deployment/web-api</span>
+                  </div>
+                  <div class="term-output term-success">
+                    ✓ deployment "web-api" successfully rolled out (0 downtime)
+                  </div>
+                  <div class="term-output" style="color: #38bdf8;">
+                    → Monitoring active: Prometheus + Grafana connected.
+                  </div>
+                  <div class="term-line" style="margin-top: 0.8rem;">
+                    <span class="term-prompt">ops@prod:~$</span>
+                    <span class="term-cmd">echo "System ready."</span>
+                    <span class="term-cursor"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 2. SERVICES SECTION ================= -->
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-header fade-in-up">
+            <div class="section-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+              <span>Dịch Vụ Nòng Cốt</span>
+            </div>
+            <h2 class="section-title">Giải Pháp Kỹ Thuật <span class="text-gradient">Chuyên Sâu</span></h2>
+            <p class="section-desc">
+              Tối ưu hóa toàn bộ vòng đời sản phẩm từ phát triển, kiểm thử cho đến triển khai tự động và bảo trì hạ tầng đa đám mây.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <!-- 1. Kubernetes Deployment -->
+            <article class="glass-card service-card fade-in-up delay-1" id="service-k8s">
+              <div>
+                <div class="service-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="2" x2="12" y2="22"></line>
+                    <path d="M12 12l7 4-7 4-7-4 7-4z"></path>
+                  </svg>
+                </div>
+                <h3 class="service-title">Kubernetes Deployment</h3>
+                <p class="service-desc">
+                  Thiết kế, xây dựng và quản trị Kubernetes Cluster (EKS, GKE, AKS, On-premise). Auto-scaling thông minh theo tải thực tế với Helm Charts &amp; Kustomize.
+                </p>
+              </div>
+              <div class="service-features">
+                <span class="service-tag">Multi-Cluster</span>
+                <span class="service-tag">HPA / VPA</span>
+                <span class="service-tag">Service Mesh</span>
+              </div>
+            </article>
+
+            <!-- 2. CI/CD Automation -->
+            <article class="glass-card service-card fade-in-up delay-2" id="service-cicd">
+              <div>
+                <div class="service-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg>
+                </div>
+                <h3 class="service-title">CI/CD Automation</h3>
+                <p class="service-desc">
+                  Xây dựng luồng tự động hóa kiểm thử, build và release code liên tục qua GitHub Actions, GitLab CI, Jenkins. Triển khai Zero-downtime &amp; Canary Release.
+                </p>
+              </div>
+              <div class="service-features">
+                <span class="service-tag">GitOps (ArgoCD)</span>
+                <span class="service-tag">Automated Testing</span>
+                <span class="service-tag">Canary Deploy</span>
+              </div>
+            </article>
+
+            <!-- 3. Cloud Infrastructure -->
+            <article class="glass-card service-card fade-in-up delay-3" id="service-cloud">
+              <div>
+                <div class="service-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                  </svg>
+                </div>
+                <h3 class="service-title">Cloud Infrastructure</h3>
+                <p class="service-desc">
+                  Kiến trúc hạ tầng chuẩn Enterprise trên AWS, GCP, Azure. Quản lý toàn bộ cấu hình bằng mã nguồn (Infrastructure as Code - Terraform, Terragrunt, Pulumi).
+                </p>
+              </div>
+              <div class="service-features">
+                <span class="service-tag">AWS / GCP / Azure</span>
+                <span class="service-tag">Terraform IaC</span>
+                <span class="service-tag">Well-Architected</span>
+              </div>
+            </article>
+
+            <!-- 4. Docker Containerization -->
+            <article class="glass-card service-card fade-in-up delay-4" id="service-docker">
+              <div>
+                <div class="service-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                  </svg>
+                </div>
+                <h3 class="service-title">Docker Containerization</h3>
+                <p class="service-desc">
+                  Đóng gói ứng dụng chuẩn microservices, tối ưu kích thước image đa tầng (Multi-stage build), quét lỗ hổng bảo mật và quản lý Private Container Registry an toàn.
+                </p>
+              </div>
+              <div class="service-features">
+                <span class="service-tag">Multi-Stage Build</span>
+                <span class="service-tag">Trivy Vulnerability</span>
+                <span class="service-tag">Slim Containers</span>
+              </div>
+            </article>
+
+            <!-- 5. Monitoring & Logging -->
+            <article class="glass-card service-card fade-in-up delay-1" id="service-monitoring">
+              <div>
+                <div class="service-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  </svg>
+                </div>
+                <h3 class="service-title">Monitoring &amp; Logging</h3>
+                <p class="service-desc">
+                  Giám sát thời gian thực với Prometheus, Grafana, ELK/EFK Stack, Datadog và Loki. Cảnh báo đa kênh tức thời qua Telegram, Slack, PagerDuty khi có sự cố.
+                </p>
+              </div>
+              <div class="service-features">
+                <span class="service-tag">Prometheus &amp; Grafana</span>
+                <span class="service-tag">ELK Stack / Loki</span>
+                <span class="service-tag">Telegram &amp; Slack Alert</span>
+              </div>
+            </article>
+
+            <!-- 6. Server Management -->
+            <article class="glass-card service-card fade-in-up delay-2" id="service-servers">
+              <div>
+                <div class="service-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                  </svg>
+                </div>
+                <h3 class="service-title">Server Management</h3>
+                <p class="service-desc">
+                  Quản trị máy chủ chuyên nghiệp Linux (Ubuntu, Debian, RHEL), cấu hình tự động với Ansible. Tối ưu Kernel, I/O và cấu hình Web Server (Nginx, Envoy, Caddy).
+                </p>
+              </div>
+              <div class="service-features">
+                <span class="service-tag">Linux Hardening</span>
+                <span class="service-tag">Ansible Automation</span>
+                <span class="service-tag">Nginx / Load Balancer</span>
+              </div>
+            </article>
+
+            <!-- 7. Security Hardening -->
+            <article class="glass-card service-card fade-in-up delay-3" id="service-security">
+              <div>
+                <div class="service-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <h3 class="service-title">Security Hardening</h3>
+                <p class="service-desc">
+                  Tích hợp DevSecOps ngay trong pipeline CI/CD: quét mã nguồn SAST/DAST, quản lý Secrets bảo mật với HashiCorp Vault, cấu hình tường lửa WAF và DDoS Shield.
+                </p>
+              </div>
+              <div class="service-features">
+                <span class="service-tag">DevSecOps</span>
+                <span class="service-tag">HashiCorp Vault</span>
+                <span class="service-tag">Cloudflare WAF / Shield</span>
+              </div>
+            </article>
+
+            <!-- 8. Backup & Disaster Recovery -->
+            <article class="glass-card service-card fade-in-up delay-4" id="service-backup">
+              <div>
+                <div class="service-icon-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                </div>
+                <h3 class="service-title">Backup &amp; Disaster Recovery</h3>
+                <p class="service-desc">
+                  Thiết lập chính sách sao lưu tự động đa vùng (Cross-Region/Multi-Cloud Backup). Cam kết RPO &lt; 15 phút, RTO &lt; 30 phút sẵn sàng phục hồi khi xảy ra thảm họa.
+                </p>
+              </div>
+              <div class="service-features">
+                <span class="service-tag">Automated Snapshots</span>
+                <span class="service-tag">RPO &lt; 15 Phút</span>
+                <span class="service-tag">Disaster Drill Testing</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 3. TECH STACK SECTION ================= -->
+      <section class="tech-stack-section" id="tech-stack">
+        <div class="container">
+          <div class="section-header fade-in-up" style="margin-bottom: 2.5rem;">
+            <div class="section-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+              <span>Ecosystem &amp; Tools</span>
+            </div>
+            <h2 class="section-title">Hệ Sinh Thái Công Nghệ <span class="text-gradient">Tiên Tiến</span></h2>
+            <p class="section-desc">
+              Chúng tôi làm chủ và tích hợp các công nghệ DevOps, Cloud và Container hàng đầu thế giới để xây dựng hạ tầng vững chắc cho bạn.
+            </p>
+          </div>
+        </div>
+
+        <!-- Track 1 -->
+        <div class="marquee-wrapper">
+          <div class="marquee-track">
+            <!-- Items 1 to 12 -->
+            <div class="tech-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242M16 14v6m-4-3v3m8-1v1M4 14h16"/></svg>
+              <span>Docker</span>
+            </div>
+            <div class="tech-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M12 2v6m0 8v6M2 12h6m8 0h6"/></svg>
+              <span>Kubernetes</span>
+            </div>
+            <div class="tech-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+              <span>Jenkins</span>
+            </div>
+            <div class="tech-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <span>GitHub Actions</span>
+            </div>
+            <div class="tech-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              <span>Terraform</span>
+            </div>
+            <div class="tech-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m14 8-4 8m0-8 4 8"/></svg>
+              <span>Ansible</span>
+            </div>
+            <div class="tech-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              <span>AWS Cloud</span>
+            </div>
+            <div class="tech-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+              <span>Google Cloud</span>
+            </div>
+            <div class="tech-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              <span>Microsoft Azure</span>
+            </div>
+            <div class="tech-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <span>Prometheus</span>
+            </div>
+            <div class="tech-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              <span>Grafana</span>
+            </div>
+            <div class="tech-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12a4 4 0 1 0 8 0 4 4 0 1 0-8 0"/></svg>
+              <span>Linux (Ubuntu/RHEL)</span>
+            </div>
+
+            <!-- Duplicate items for seamless continuous loop -->
+            <div class="tech-item"><svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242M16 14v6m-4-3v3m8-1v1M4 14h16"/></svg><span>Docker</span></div>
+            <div class="tech-item"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M12 2v6m0 8v6M2 12h6m8 0h6"/></svg><span>Kubernetes</span></div>
+            <div class="tech-item"><svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg><span>Jenkins</span></div>
+            <div class="tech-item"><svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg><span>GitHub Actions</span></div>
+            <div class="tech-item"><svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg><span>Terraform</span></div>
+            <div class="tech-item"><svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m14 8-4 8m0-8 4 8"/></svg><span>Ansible</span></div>
+            <div class="tech-item"><svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><span>AWS Cloud</span></div>
+            <div class="tech-item"><svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg><span>Google Cloud</span></div>
+            <div class="tech-item"><svg viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg><span>Microsoft Azure</span></div>
+            <div class="tech-item"><svg viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><span>Prometheus</span></div>
+            <div class="tech-item"><svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><span>Grafana</span></div>
+            <div class="tech-item"><svg viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12a4 4 0 1 0 8 0 4 4 0 1 0-8 0"/></svg><span>Linux</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 4. STATISTICS SECTION ================= -->
+      <section class="stats-section" id="statistics">
+        <div class="container">
+          <div class="stats-card-wrapper fade-in-up">
+            <div class="stats-grid">
+              <!-- Counter 1: 200+ -->
+              <div class="stat-box">
+                <div class="stat-number-wrap">
+                  <span class="stat-number" data-target="200" data-decimal="false">0</span>
+                  <span class="stat-suffix">+</span>
+                </div>
+                <div class="stat-label">Servers Managed</div>
+              </div>
+
+              <!-- Counter 2: 100+ -->
+              <div class="stat-box">
+                <div class="stat-number-wrap">
+                  <span class="stat-number" data-target="100" data-decimal="false">0</span>
+                  <span class="stat-suffix">+</span>
+                </div>
+                <div class="stat-label">Projects Delivered</div>
+              </div>
+
+              <!-- Counter 3: 99.99% -->
+              <div class="stat-box">
+                <div class="stat-number-wrap">
+                  <span class="stat-number" data-target="99.99" data-decimal="true">0</span>
+                  <span class="stat-suffix">%</span>
+                </div>
+                <div class="stat-label">Uptime Guaranteed</div>
+              </div>
+
+              <!-- Counter 4: 24/7 -->
+              <div class="stat-box">
+                <div class="stat-number-wrap">
+                  <span class="stat-number" data-target="24" data-decimal="false">0</span>
+                  <span class="stat-suffix">/7</span>
+                </div>
+                <div class="stat-label">Engineers Support</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 5. WHY CHOOSE US ================= -->
+      <section class="section" id="why-us">
+        <div class="container">
+          <div class="section-header fade-in-up">
+            <div class="section-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+              <span>Lợi Thế Cạnh Tranh</span>
+            </div>
+            <h2 class="section-title">Tại Sao Khách Hàng <span class="text-gradient">Tin Chọn Chúng Tôi?</span></h2>
+            <p class="section-desc">
+              Chúng tôi không chỉ là nhà cung cấp hạ tầng, mà là đối tác chiến lược công nghệ sát cánh cùng sự phát triển bền vững của doanh nghiệp.
+            </p>
+          </div>
+
+          <div class="why-grid">
+            <!-- 1. Automation First -->
+            <div class="glass-card why-card fade-in-up delay-1">
+              <div class="why-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <h3 class="why-title">Automation First</h3>
+              <p class="why-desc">
+                Loại bỏ 100% các thao tác thủ công dễ gây lỗi. Mọi quy trình từ test, build, deploy đến scale đều được mã hóa bằng code (IaC &amp; GitOps).
+              </p>
+              <ul class="why-perks">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Tăng tốc release gấp 5 lần</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Giảm thiểu lỗi do con người</li>
+              </ul>
+            </div>
+
+            <!-- 2. Security Focused -->
+            <div class="glass-card why-card fade-in-up delay-2">
+              <div class="why-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <h3 class="why-title">Security Focused</h3>
+              <p class="why-desc">
+                Bảo mật theo mô hình Zero Trust. Quét tự động mã nguồn, kiểm toán quyền IAM tối thiểu và tuân thủ các tiêu chuẩn quốc tế ISO 27001, SOC 2.
+              </p>
+              <ul class="why-perks">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Mã hóa toàn bộ dữ liệu (In-transit/At-rest)</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Bảo vệ WAF &amp; chống DDoS chuyên sâu</li>
+              </ul>
+            </div>
+
+            <!-- 3. Cost Optimization -->
+            <div class="glass-card why-card fade-in-up delay-3">
+              <div class="why-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h3 class="why-title">Cost Optimization</h3>
+              <p class="why-desc">
+                Áp dụng thực hành FinOps chuyên nghiệp. Phân tích tài nguyên nhàn rỗi, tận dụng Spot Instances và Savings Plans giúp tiết kiệm từ 35% - 60% hóa đơn Cloud.
+              </p>
+              <ul class="why-perks">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Tiết kiệm đến 60% chi phí Cloud</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Báo cáo minh bạch từng dịch vụ</li>
+              </ul>
+            </div>
+
+            <!-- 4. High Availability -->
+            <div class="glass-card why-card fade-in-up delay-4">
+              <div class="why-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+              </div>
+              <h3 class="why-title">High Availability</h3>
+              <p class="why-desc">
+                Thiết kế kiến trúc phân tán Multi-AZ (Đa vùng) và Multi-Region. Hệ thống tự động phục hồi sự cố (Self-healing) mà không làm gián đoạn người dùng cuối.
+              </p>
+              <ul class="why-perks">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Uptime cam kết 99.99% qua SLA</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Tự động failover khi có node lỗi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 6. PROCESS SECTION ================= -->
+      <section class="section" id="process">
+        <div class="container">
+          <div class="section-header fade-in-up">
+            <div class="section-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <span>Quy Trình 5 Bước</span>
+            </div>
+            <h2 class="section-title">Lộ Trình Triển Khai <span class="text-gradient">Chuẩn Quốc Tế</span></h2>
+            <p class="section-desc">
+              Phương pháp luận rõ ràng, minh bạch giúp chuyển đổi hệ thống suôn sẻ, không phát sinh downtime bất ngờ.
+            </p>
+          </div>
+
+          <div class="timeline-container">
+            <div class="timeline-line"></div>
+
+            <!-- Step 1: Assessment -->
+            <div class="timeline-step left fade-in-up">
+              <div class="timeline-marker">1</div>
+              <div class="step-card">
+                <div class="step-badge">Giai đoạn 01</div>
+                <h3 class="step-title">Assessment &amp; Audit</h3>
+                <p class="step-desc">
+                  Khảo sát toàn diện hiện trạng mã nguồn, kiến trúc máy chủ, hiệu năng, điểm nghẽn (bottleneck) và các lỗ hổng bảo mật tiềm ẩn.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2: Planning -->
+            <div class="timeline-step right fade-in-up">
+              <div class="timeline-marker">2</div>
+              <div class="step-card">
+                <div class="step-badge">Giai đoạn 02</div>
+                <h3 class="step-title">Architecture Planning</h3>
+                <p class="step-desc">
+                  Lập thiết kế chi tiết kiến trúc Cloud/K8s tối ưu, kế hoạch phân chia tài nguyên, sơ đồ mạng VPC an toàn và lộ trình chuyển đổi không gián đoạn.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3: Implementation -->
+            <div class="timeline-step left fade-in-up">
+              <div class="timeline-marker">3</div>
+              <div class="step-card">
+                <div class="step-badge">Giai đoạn 03</div>
+                <h3 class="step-title">Implementation &amp; CI/CD</h3>
+                <p class="step-desc">
+                  Khởi tạo hạ tầng bằng Terraform, đóng gói Docker container, thiết lập GitOps CI/CD pipeline và cấu hình auto-scaling cho dịch vụ.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4: Monitoring -->
+            <div class="timeline-step right fade-in-up">
+              <div class="timeline-marker">4</div>
+              <div class="step-card">
+                <div class="step-badge">Giai đoạn 04</div>
+                <h3 class="step-title">Monitoring &amp; Alerting</h3>
+                <p class="step-desc">
+                  Tích hợp hệ thống đo lường metrics (Prometheus, Grafana), thu thập log tập trung và cấu hình ngưỡng cảnh báo khẩn cấp tới đội ngũ kỹ thuật.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 5: Optimization -->
+            <div class="timeline-step left fade-in-up">
+              <div class="timeline-marker">5</div>
+              <div class="step-card">
+                <div class="step-badge">Giai đoạn 05</div>
+                <h3 class="step-title">Continuous Optimization</h3>
+                <p class="step-desc">
+                  Bàn giao tài liệu hướng dẫn kỹ thuật chi tiết, đào tạo đội ngũ nội bộ và tiến hành kiểm toán định kỳ để tối ưu chi phí và hiệu suất.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 7. TESTIMONIALS ================= -->
+      <section class="section" id="testimonials">
+        <div class="container">
+          <div class="section-header fade-in-up">
+            <div class="section-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              <span>Khách Hàng Nói Gì?</span>
+            </div>
+            <h2 class="section-title">Đánh Giá Từ <span class="text-gradient">Đối Tác Đồng Hành</span></h2>
+            <p class="section-desc">
+              Những doanh nghiệp đã chuyển đổi số và nâng cao độ ổn định hệ thống thành công cùng đội ngũ kỹ sư CloudOps.
+            </p>
+          </div>
+
+          <div class="testimonials-grid">
+            <!-- Review 1 -->
+            <div class="glass-card testimonial-card fade-in-up delay-1">
+              <div>
+                <div class="testimonial-stars">
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <div class="testimonial-metric">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline></svg>
+                  <span>Cắt giảm 55% chi phí hạ tầng AWS</span>
+                </div>
+                <p class="testimonial-quote">
+                  "Trước khi làm việc với CloudOps, đội ngũ dev của chúng tôi mất 2 ngày để deploy một bản cập nhật và chi phí AWS tăng chóng mặt. Sau khi chuẩn hóa Kubernetes và CI/CD, việc deploy chỉ còn 5 phút và hóa đơn Cloud giảm hơn một nửa!"
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80" alt="Nguyễn Minh Quân" class="author-avatar" />
+                <div class="author-info">
+                  <h4>Nguyễn Minh Quân</h4>
+                  <p>CTO, FinPay Vietnam</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="glass-card testimonial-card fade-in-up delay-2">
+              <div>
+                <div class="testimonial-stars">
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <div class="testimonial-metric">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>1.5M Requests/phút &mdash; 0 Downtime</span>
+                </div>
+                <p class="testimonial-quote">
+                  "Đợt Mega Sale 11/11 và Black Friday vừa qua hệ thống thương mại điện tử của chúng tôi chịu tải kỷ lục với hơn 1.5 triệu truy vấn mỗi phút. Cụm Kubernetes tự động scale cực kỳ mượt mà, tỷ lệ lỗi HTTP 5xx là 0.00%."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80" alt="Trần Đăng Khoa" class="author-avatar" />
+                <div class="author-info">
+                  <h4>Trần Đăng Khoa</h4>
+                  <p>Head of Engineering, ShopMall Corp</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="glass-card testimonial-card fade-in-up delay-3">
+              <div>
+                <div class="testimonial-stars">
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <div class="testimonial-metric">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  <span>Tuân thủ SOC 2 &amp; Hỗ trợ 24/7</span>
+                </div>
+                <p class="testimonial-quote">
+                  "Là công ty SaaS phục vụ khách hàng quốc tế, yêu cầu về bảo mật của chúng tôi rất khắt khe. Đội ngũ CloudOps đã xây dựng toàn bộ pipeline DevSecOps và quy trình sao lưu đạt chuẩn SOC 2. Đội ngũ phản hồi ticket chỉ trong vài phút."
+                </p>
+              </div>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&h=120&q=80" alt="Lê Hoàng Hải Yến" class="author-avatar" />
+                <div class="author-info">
+                  <h4>Lê Hoàng Hải Yến</h4>
+                  <p>Founder &amp; CEO, DocuCloud Global</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 8. PRICING SECTION ================= -->
+      <section class="section" id="pricing">
+        <div class="container">
+          <div class="section-header fade-in-up">
+            <div class="section-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+              <span>Bảng Giá Minh Bạch</span>
+            </div>
+            <h2 class="section-title">Gói Dịch Vụ Phù Hợp <span class="text-gradient">Mọi Quy Mô</span></h2>
+            <p class="section-desc">
+              Linh hoạt theo nhu cầu của startup giai đoạn đầu cho tới doanh nghiệp vận hành hạ tầng đa cụm quy mô lớn.
+            </p>
+          </div>
+
+          <!-- Monthly / Yearly Switch -->
+          <div class="pricing-toggle-wrap fade-in-up">
+            <span class="pricing-toggle-label active" id="monthly-label">Thanh Toán Theo Tháng</span>
+            <div class="toggle-switch" id="pricing-toggle" role="switch" aria-checked="false" tabindex="0">
+              <span class="toggle-slider"></span>
+            </div>
+            <span class="pricing-toggle-label" id="yearly-label">Thanh Toán Theo Năm</span>
+            <span class="discount-badge">Tiết kiệm 20%</span>
+          </div>
+
+          <div class="pricing-grid">
+            <!-- Plan 1: Starter -->
+            <div class="glass-card pricing-card fade-in-up delay-1" id="plan-starter">
+              <div class="pricing-header">
+                <h3 class="pricing-title">Starter</h3>
+                <p class="pricing-desc">Phù hợp startup giai đoạn MVP, ứng dụng đơn cụm vừa và nhỏ.</p>
+                <div class="price-wrap">
+                  <span class="price-val">15.000.000</span>
+                  <span class="price-period">VNĐ / tháng</span>
+                </div>
+              </div>
+              <ul class="pricing-features">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Quản trị 1 - 3 máy chủ Cloud</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Thiết lập CI/CD cơ bản (GitHub/GitLab)</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Đóng gói Docker Containers</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Giám sát cơ bản &amp; cảnh báo Telegram</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Sao lưu dữ liệu hàng ngày (Daily Backup)</li>
+                <li class="disabled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Cụm Kubernetes Multi-Master</li>
+                <li class="disabled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Hỗ trợ khẩn cấp 24/7 SLA 15 phút</li>
+              </ul>
+              <a href="#contact" class="btn btn-secondary" style="width: 100%;">Chọn Gói Starter</a>
+            </div>
+
+            <!-- Plan 2: Professional (Featured) -->
+            <div class="glass-card pricing-card featured fade-in-up delay-2" id="plan-pro">
+              <div class="featured-badge">Được Chọn Nhiều Nhất</div>
+              <div class="pricing-header">
+                <h3 class="pricing-title">Professional</h3>
+                <p class="pricing-desc">Dành cho doanh nghiệp tăng trưởng nhanh, hệ thống chịu tải cao.</p>
+                <div class="price-wrap">
+                  <span class="price-val" style="color: var(--accent);">35.000.000</span>
+                  <span class="price-period">VNĐ / tháng</span>
+                </div>
+              </div>
+              <ul class="pricing-features">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Quản trị lên đến 15 máy chủ / Nodes</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Quản trị Kubernetes Cluster (EKS / GKE)</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> CI/CD nâng cao Zero-Downtime / Canary</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Infrastructure as Code (Terraform)</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Prometheus + Grafana + Log tập trung</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Tối ưu chi phí FinOps hàng tháng</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Hỗ trợ kỹ thuật 24/7 qua SLA cam kết</li>
+              </ul>
+              <a href="#contact" class="btn btn-primary" style="width: 100%;">Đăng Ký Gói Pro</a>
+            </div>
+
+            <!-- Plan 3: Enterprise -->
+            <div class="glass-card pricing-card fade-in-up delay-3" id="plan-enterprise">
+              <div class="pricing-header">
+                <h3 class="pricing-title">Enterprise</h3>
+                <p class="pricing-desc">Hạ tầng phức tạp, tập đoàn lớn cần kỹ sư DevOps chuyên trách (Dedicated).</p>
+                <div class="price-wrap">
+                  <span class="price-val">Tùy biến</span>
+                  <span class="price-period">Theo yêu cầu cụ thể</span>
+                </div>
+              </div>
+              <ul class="pricing-features">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Không giới hạn số lượng Servers/Nodes</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Kiến trúc Multi-Cloud &amp; Hybrid Cloud</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Kỹ sư DevOps Dedicated toàn thời gian</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> DevSecOps &amp; Kiểm toán bảo mật SOC 2</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Disaster Recovery đa vùng RPO &lt; 5m</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Hotline phản hồi khẩn cấp SLA 15 phút</li>
+              </ul>
+              <a href="#contact" class="btn btn-outline" style="width: 100%;">Tư Vấn Doanh Nghiệp</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 9. FAQ SECTION (ACCORDION) ================= -->
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-header fade-in-up">
+            <div class="section-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+              <span>Giải Đáp Thắc Mắc</span>
+            </div>
+            <h2 class="section-title">Câu Hỏi Thường Gặp <span class="text-gradient">(FAQ)</span></h2>
+            <p class="section-desc">
+              Mọi giải đáp về dịch vụ DevOps, phương thức triển khai, bảo mật và hình thức hợp tác kỹ thuật.
+            </p>
+          </div>
+
+          <div class="faq-accordion fade-in-up">
+            <!-- Question 1 -->
+            <div class="faq-item active">
+              <button class="faq-question" aria-expanded="true">
+                <span>1. Dịch vụ DevOps của CloudOps phù hợp với những đối tượng doanh nghiệp nào?</span>
+                <div class="faq-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Dịch vụ của chúng tôi phù hợp nhất với các Startup công nghệ đang phát triển nhanh, công ty SaaS, sàn thương mại điện tử hoặc doanh nghiệp vừa và lớn muốn chuyển đổi số lên Cloud. Chúng tôi giúp doanh nghiệp giải bài toán thiếu hụt nhân sự DevOps chuyên sâu với chi phí chỉ bằng 1/3 việc tự tuyển dụng và duy trì đội ngũ nội bộ.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>2. Quá trình di chuyển hệ thống lên Kubernetes/Cloud có gây gián đoạn (downtime) không?</span>
+                <div class="faq-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Hoàn toàn không. Chúng tôi áp dụng chiến lược chuyển đổi Blue/Green Deployment và đồng bộ dữ liệu song song (Live Replication). Hệ thống mới được test kỹ lưỡng trên môi trường Staging trước khi điều hướng lưu lượng DNS dần dần, đảm bảo người dùng cuối không gặp bất kỳ gián đoạn nào.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>3. Doanh nghiệp cần chuẩn bị những thông tin gì trước khi bắt đầu hợp tác?</span>
+                <div class="faq-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Bạn chỉ cần cung cấp thông tin sơ bộ về: ngôn ngữ/framework đang sử dụng, quy mô máy chủ hiện tại (hoặc tài khoản Cloud), lưu lượng truy cập trung bình và mục tiêu mong muốn (ví dụ: cắt giảm chi phí, tự động hóa build code hoặc nâng cấp cụm K8s). Chúng tôi sẽ ký kết thỏa thuận bảo mật NDA trước khi tiến hành khảo sát chi tiết.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>4. Doanh nghiệp có được bàn giao toàn bộ mã nguồn hạ tầng (IaC) và tài liệu không?</span>
+                <div class="faq-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Có. Toàn bộ mã nguồn hạ tầng (Terraform, Dockerfile, Helm Charts, GitLab/GitHub CI script) đều được lưu trữ trực tiếp trên Git repository của doanh nghiệp bạn. Sau khi hoàn thành triển khai, chúng tôi cung cấp đầy đủ tài liệu Architecture Diagram, Runbook xử lý sự cố và các buổi đào tạo chuyển giao cho đội ngũ dev của bạn.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>5. Đội ngũ có hỗ trợ xử lý sự cố khẩn cấp (Incident Response) 24/7/365 không?</span>
+                <div class="faq-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Chắc chắn có. Hệ thống giám sát của chúng tôi liên tục theo dõi tình trạng cluster 24/7. Khi có sự cố vượt ngưỡng (Threshold Alert), kỹ sư On-call sẽ lập tức tiếp nhận qua hệ thống PagerDuty/Hotline khẩn cấp và cam kết thời gian bắt đầu xử lý trong vòng 15 phút theo cam kết hợp đồng SLA.
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>6. Chính sách bảo mật dữ liệu và quyền riêng tư được cam kết như thế nào?</span>
+                <div class="faq-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Chúng tôi tuân thủ nghiêm ngặt quy tắc Zero Trust và ký kết hợp đồng NDA có giá trị pháp lý. Mọi truy cập vào hạ tầng của khách hàng đều thông qua VPN/Bastion Host có xác thực 2 lớp (MFA), có ghi log thao tác (Audit Logs) minh bạch. Đội ngũ kỹ sư chỉ thao tác trên quyền hạn tối thiểu (Principle of Least Privilege).
+                </p>
+              </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>7. Chi phí dịch vụ có bao gồm chi phí thuê máy chủ Cloud (AWS/GCP) không?</span>
+                <div class="faq-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Chi phí niêm yết trên website là phí dịch vụ kỹ thuật quản trị và triển khai của CloudOps. Chi phí tài nguyên hạ tầng (Cloud Server, Storage, Bandwidth) sẽ do khách hàng thanh toán trực tiếp cho nhà cung cấp Cloud (AWS, Google Cloud, Azure, DigitalOcean). Chúng tôi sẽ tư vấn tối ưu để hóa đơn Cloud này ở mức thấp nhất.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 10. CONTACT SECTION ================= -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="contact-grid">
+            <!-- Left Info -->
+            <div class="contact-info fade-in-up">
+              <div>
+                <div class="section-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <span>Kết Nối Ngay</span>
+                </div>
+                <h2 class="section-title">Sẵn Sàng Nâng Tầm <span class="text-gradient">Hạ Tầng Của Bạn?</span></h2>
+                <p class="section-desc">
+                  Hãy để lại thông tin hoặc đặt lịch hẹn tư vấn kỹ thuật trực tiếp cùng Senior DevOps Architect của chúng tôi.
+                </p>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="contact-text">
+                  <h4>Email Kỹ Thuật</h4>
+                  <p><a href="mailto:contact@cloudops.dev">contact@cloudops.dev</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div class="contact-text">
+                  <h4>Hotline 24/7</h4>
+                  <p><a href="tel:0988123456">+84 (0) 988 123 456</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="contact-text">
+                  <h4>Văn Phòng Làm Việc</h4>
+                  <p>Tòa nhà Landmark 81, P. 22, Q. Bình Thạnh, TP. Hồ Chí Minh</p>
+                </div>
+              </div>
+
+              <div class="sla-guarantee">
+                <h5>
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Cam Kết Phản Hồi Trong 15 Phút</span>
+                </h5>
+                <p>
+                  Mọi yêu cầu tư vấn gửi qua form sẽ được Senior DevOps Architect phản hồi và phân tích miễn phí trong vòng 15 phút làm việc.
+                </p>
+              </div>
+            </div>
+
+            <!-- Right Form -->
+            <div class="glass-card contact-form-card fade-in-up delay-2">
+              <form id="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group" id="group-name">
+                    <label class="form-label" for="contact-name">Họ và tên *</label>
+                    <input type="text" id="contact-name" class="form-input" placeholder="Ví dụ: Nguyễn Văn An" required />
+                    <span class="error-message">Vui lòng nhập họ và tên</span>
+                  </div>
+
+                  <div class="form-group" id="group-phone">
+                    <label class="form-label" for="contact-phone">Số điện thoại *</label>
+                    <input type="tel" id="contact-phone" class="form-input" placeholder="Ví dụ: 0988123456" required />
+                    <span class="error-message">Số điện thoại không hợp lệ</span>
+                  </div>
+                </div>
+
+                <div class="form-group" id="group-email">
+                  <label class="form-label" for="contact-email">Email doanh nghiệp *</label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="Ví dụ: an.nguyen@company.com" required />
+                  <span class="error-message">Email không hợp lệ</span>
+                </div>
+
+                <div class="form-group" id="group-service">
+                  <label class="form-label" for="contact-service">Dịch vụ quan tâm</label>
+                  <select id="contact-service" class="form-select">
+                    <option value="k8s">Kubernetes Deployment &amp; Management</option>
+                    <option value="cicd">CI/CD Automation Pipeline</option>
+                    <option value="cloud">Cloud Migration &amp; IaC Terraform</option>
+                    <option value="monitoring">Monitoring, Logging &amp; Alerting 24/7</option>
+                    <option value="finops">FinOps - Tối ưu hóa chi phí Cloud</option>
+                    <option value="audit">DevSecOps &amp; Security Hardening</option>
+                    <option value="all">Tư vấn tổng thể giải pháp DevOps</option>
+                  </select>
+                </div>
+
+                <div class="form-group" id="group-message">
+                  <label class="form-label" for="contact-message">Nhu cầu / Mô tả hệ thống hiện tại *</label>
+                  <textarea id="contact-message" class="form-textarea" placeholder="Mô tả quy mô máy chủ, vấn đề đang gặp phải hoặc mục tiêu của doanh nghiệp..." required></textarea>
+                  <span class="error-message">Vui lòng nhập mô tả nhu cầu (tối thiểu 10 ký tự)</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;" id="submit-contact-btn">
+                  <span>Gửi Yêu Cầu Tư Vấn Ngay</span>
+                  <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= 11. FOOTER ================= -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand Col -->
+          <div class="footer-brand">
+            <a href="#hero" class="logo" aria-label="CloudOps Homepage">
+              <div class="logo-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <div class="logo-text">Cloud<span>Ops</span></div>
+            </a>
+            <p>
+              Đối tác tin cậy cung cấp giải pháp DevOps Engineering, kiến trúc Cloud Infrastructure và tự động hóa quy trình phần mềm chuẩn Enterprise.
+            </p>
+            <div class="social-links">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Telegram">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.197 1.006.128.832.942z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 2: Dịch vụ -->
+          <div class="footer-col">
+            <h4>Dịch Vụ</h4>
+            <ul class="footer-links">
+              <li><a href="#services">Kubernetes Deployment</a></li>
+              <li><a href="#services">CI/CD Automation</a></li>
+              <li><a href="#services">Cloud Infrastructure IaC</a></li>
+              <li><a href="#services">Docker Containerization</a></li>
+              <li><a href="#services">Monitoring &amp; Alerting</a></li>
+              <li><a href="#services">Security Hardening</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Liên kết nhanh -->
+          <div class="footer-col">
+            <h4>Liên Kết Nhanh</h4>
+            <ul class="footer-links">
+              <li><a href="#hero">Trang Chủ</a></li>
+              <li><a href="#tech-stack">Công Nghệ</a></li>
+              <li><a href="#why-us">Tại Sao Chọn Chúng Tôi</a></li>
+              <li><a href="#process">Quy Trình Làm Việc</a></li>
+              <li><a href="#testimonials">Đánh Giá Khách Hàng</a></li>
+              <li><a href="#pricing">Bảng Giá Dịch Vụ</a></li>
+              <li><a href="#faq">Hỏi Đáp (FAQ)</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Newsletter -->
+          <div class="footer-col">
+            <h4>Nhận Bản Tin DevOps</h4>
+            <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+              Cập nhật các bài viết phân tích kiến trúc Cloud, Kubernetes và mẹo tối ưu chi phí định kỳ.
+            </p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký nhận bản tin!'); this.reset();">
+              <input type="email" class="newsletter-input" placeholder="email@company.com" required />
+              <button type="submit" class="btn btn-primary" style="padding: 0.75rem 1rem;">Gửi</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyright">
+            &copy; 2026 CloudOps Inc. Toàn bộ quyền được bảo lưu. Thiết kế cho kỷ nguyên Điện Toán Đám Mây.
+          </div>
+          <div class="cert-badges">
+            <span class="cert-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              SOC 2 Type II
+            </span>
+            <span class="cert-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              ISO 27001
+            </span>
+            <span class="cert-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              AWS Partner Network
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Floating Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Cuộn lên đầu trang">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toast-notification" role="status" aria-live="polite">
+      <div class="toast-icon">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+      <div class="toast-content">
+        <h5>Gửi yêu cầu thành công!</h5>
+        <p>Chuyên viên DevOps sẽ liên hệ với bạn trong vòng 15 phút.</p>
+      </div>
+    </div>
+
+    <!-- Vanilla JavaScript File -->
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
