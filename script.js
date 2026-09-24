@@ -57,6 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
      10. Back to Top Button
      -------------------------------------------------------------------------- */
   initBackToTop();
+
+  /* --------------------------------------------------------------------------
+     11. Floating Live Chat Widget (Temporary Demo)
+     -------------------------------------------------------------------------- */
+  initLiveChat();
 });
 
 /**
@@ -597,3 +602,235 @@ function initBackToTop() {
     });
   });
 }
+
+/**
+ * 11. Floating Live Chat Widget (Temporary Demo)
+ * Simulates interactive technical DevOps support consultation
+ */
+function initLiveChat() {
+  const wrapper = document.getElementById('live-chat-wrapper');
+  const toggleBtn = document.getElementById('live-chat-toggle');
+  const closeBtn = document.getElementById('chat-close-btn');
+  const clearBtn = document.getElementById('chat-clear-btn');
+  const chatMessages = document.getElementById('chat-messages');
+  const chatForm = document.getElementById('chat-form');
+  const chatInput = document.getElementById('chat-input');
+  const typingIndicator = document.getElementById('chat-typing-indicator');
+  const quickChips = document.querySelectorAll('.quick-chip');
+  const chatStartTime = document.getElementById('chat-start-time');
+
+  if (!wrapper || !toggleBtn || !chatForm || !chatInput || !chatMessages) return;
+
+  // Format current time for display
+  function formatCurrentTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    return `${hours}:${minutes}`;
+  }
+
+  // Set initial header timestamp
+  if (chatStartTime) {
+    chatStartTime.textContent = `Hôm nay, ${formatCurrentTime()}`;
+  }
+
+  // Toggle live chat open/closed state
+  toggleBtn.addEventListener('click', () => {
+    const isOpen = wrapper.classList.toggle('open');
+    if (isOpen) {
+      setTimeout(() => {
+        chatInput.focus();
+        scrollToBottom();
+      }, 150);
+    }
+  });
+
+  // Close button
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      wrapper.classList.remove('open');
+    });
+  }
+
+  // Close on Escape key press
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && wrapper.classList.contains('open')) {
+      wrapper.classList.remove('open');
+    }
+  });
+
+  // Reset / Clear chat conversation
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      // Remove all user and bot replies except the initial greeting, chips, and typing indicator
+      const dynamicMsgs = chatMessages.querySelectorAll('.chat-msg.dynamic-msg');
+      dynamicMsgs.forEach((msg) => msg.remove());
+      scrollToBottom();
+      chatInput.focus();
+    });
+  }
+
+  // Handle Quick Chips
+  quickChips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const query = chip.getAttribute('data-query') || chip.textContent.trim();
+      handleUserSendMessage(query);
+    });
+  });
+
+  // Handle Chat Form Submit
+  chatForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const text = chatInput.value.trim();
+    if (!text) return;
+    handleUserSendMessage(text);
+  });
+
+  // Main message handler
+  function handleUserSendMessage(text) {
+    // 1. Add user message
+    appendMessage(text, 'user');
+    chatInput.value = '';
+
+    // 2. Show typing indicator
+    showTypingIndicator();
+    scrollToBottom();
+
+    // 3. Generate bot response with simulated realistic network delay
+    const delay = Math.floor(Math.random() * 400) + 700; // 700ms - 1100ms
+    setTimeout(() => {
+      const botResponse = generateBotResponse(text);
+      hideTypingIndicator();
+      appendMessage(botResponse, 'bot');
+      scrollToBottom();
+    }, delay);
+  }
+
+  // Append message to chat container
+  function appendMessage(contentHtml, sender) {
+    const msgEl = document.createElement('div');
+    msgEl.className = `chat-msg ${sender} dynamic-msg`;
+
+    const timeStr = formatCurrentTime();
+
+    if (sender === 'user') {
+      msgEl.innerHTML = `
+        <div class="msg-body">
+          <div class="msg-bubble">${escapeHtml(contentHtml)}</div>
+          <span class="msg-time">${timeStr}</span>
+        </div>
+      `;
+    } else {
+      msgEl.innerHTML = `
+        <div class="msg-avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <div class="msg-body">
+          <div class="msg-bubble">${contentHtml}</div>
+          <span class="msg-time">${timeStr}</span>
+        </div>
+      `;
+    }
+
+    // Insert right before typing indicator
+    if (typingIndicator) {
+      chatMessages.insertBefore(msgEl, typingIndicator);
+    } else {
+      chatMessages.appendChild(msgEl);
+    }
+  }
+
+  // Show / hide typing dots
+  function showTypingIndicator() {
+    if (!typingIndicator) return;
+    typingIndicator.style.display = 'flex';
+    chatMessages.appendChild(typingIndicator); // ensure it's at the very bottom
+  }
+
+  function hideTypingIndicator() {
+    if (!typingIndicator) return;
+    typingIndicator.style.display = 'none';
+  }
+
+  function scrollToBottom() {
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  // Rule-based DevOps consultation assistant logic
+  function generateBotResponse(input) {
+    const text = input.toLowerCase();
+
+    if (text.includes('k8s') || text.includes('kubernetes') || text.includes('cụm') || text.includes('pod') || text.includes('cluster')) {
+      return `
+        <p><strong>Về dịch vụ Kubernetes:</strong> CloudOps chuyên thiết kế & vận hành cụm Kubernetes production trên AWS (EKS), GCP (GKE), Azure (AKS) hoặc Bare-metal.</p>
+        <p>Hệ thống bao gồm đầy đủ Ingress NGINX, Cert-Manager tự động cấp SSL Let's Encrypt, ArgoCD GitOps và HPA tự co giãn tài nguyên. Quý khách đang quản lý quy mô bao nhiêu microservices ạ?</p>
+      `;
+    }
+
+    if (text.includes('ci/cd') || text.includes('cicd') || text.includes('pipeline') || text.includes('github') || text.includes('gitlab') || text.includes('jenkins') || text.includes('deploy')) {
+      return `
+        <p><strong>Về Tự động hóa CI/CD:</strong> Chúng tôi thiết lập pipeline chuẩn DevSecOps với GitHub Actions / GitLab CI. Tự động kiểm tra chất lượng code, Docker Layer caching giúp rút ngắn thời gian build từ 20 phút xuống còn dưới 3 phút, và tự động deploy <strong>Zero-downtime</strong>.</p>
+        <p>Quý khách đang lưu trữ mã nguồn trên GitHub, GitLab hay Bitbucket?</p>
+      `;
+    }
+
+    if (text.includes('giá') || text.includes('chi phí') || text.includes('báo giá') || text.includes('cost') || text.includes('finops') || text.includes('tiền') || text.includes('gói')) {
+      return `
+        <p><strong>Báo giá dịch vụ DevOps:</strong></p>
+        <p>• <strong>Gói Starter:</strong> 499$/tháng (Phù hợp hệ thống nhỏ, 1-3 cụm)<br>
+        • <strong>Gói Professional:</strong> 1,299$/tháng (Hỗ trợ 24/7, tối ưu FinOps, CI/CD nâng cao)<br>
+        • <strong>Gói Enterprise:</strong> May đo theo quy mô hạ tầng lớn.</p>
+        <p>Đặc biệt, dịch vụ <strong>FinOps Audit</strong> của chúng tôi cam kết giúp tiết kiệm từ 30% đến 50% tiền server AWS/GCP ngay trong tháng đầu tiên!</p>
+      `;
+    }
+
+    if (text.includes('khẩn cấp') || text.includes('sự cố') || text.includes('24/7') || text.includes('cứu hộ') || text.includes('down') || text.includes('sập') || text.includes('lỗi')) {
+      return `
+        <p>🚨 <strong>Đội ngũ trực On-call 24/7:</strong></p>
+        <p>Đối với sự cố hạ tầng khẩn cấp (server down, quá tải database, DDOS), kỹ sư cấp cao của chúng tôi phản hồi trong <strong>dưới 15 phút</strong> qua kênh liên lạc ưu tiên.</p>
+        <p>Quý khách vui lòng liên hệ ngay hotline trực tiếp: <strong>+84 (0) 90 123 4567</strong> hoặc để lại số điện thoại ngay tại đây để được kỹ sư liên hệ lại lập tức!</p>
+      `;
+    }
+
+    if (text.includes('docker') || text.includes('container') || text.includes('containerize')) {
+      return `
+        <p><strong>Về Docker & Containerization:</strong></p>
+        <p>CloudOps giúp chuẩn hóa toàn bộ Dockerfile: sử dụng Multi-stage build, base image siêu nhẹ (Alpine/Distroless), cấu hình non-root user và quét lỗ hổng Trivy, đảm bảo container an toàn tuyệt đối và khởi động cực nhanh.</p>
+      `;
+    }
+
+    if (text.includes('giám sát') || text.includes('monitor') || text.includes('prometheus') || text.includes('grafana') || text.includes('log') || text.includes('alert')) {
+      return `
+        <p><strong>Hệ thống Giám sát & Cảnh báo:</strong></p>
+        <p>Triển khai bộ công cụ hoàn chỉnh: <strong>Prometheus + Grafana + Loki</strong>. Cung cấp Dashboard trực quan theo dõi CPU, RAM, Network, HTTP Error Rate và tự động bắn tin cảnh báo tức thời qua Telegram/Slack của đội ngũ kỹ thuật.</p>
+      `;
+    }
+
+    if (text.includes('liên hệ') || text.includes('hotline') || text.includes('sđt') || text.includes('email') || text.includes('gặp') || text.includes('tư vấn')) {
+      return `
+        <p>Quý khách có thể gửi thông tin liên hệ (Email hoặc SĐT) ngay trong khung chat này, hoặc gọi hotline <strong>+84 (0) 90 123 4567</strong>. Đội ngũ CloudOps sẽ liên hệ và chuẩn bị bản phác thảo kiến trúc miễn phí cho dự án của bạn!</p>
+      `;
+    }
+
+    // Default polite and professional response
+    return `
+      <p>Cảm ơn quý khách đã gửi thông tin: <em>"${escapeHtml(input)}"</em>.</p>
+      <p>Yêu cầu của bạn đã được chuyển tới kỹ sư DevOps phụ trách ca trực. Để nhận tư vấn kiến trúc chuyên sâu và bản báo giá chi tiết, bạn có thể để lại <strong>Email</strong> hoặc <strong>Số điện thoại</strong> ngay tại đây nhé!</p>
+    `;
+  }
+
+  // HTML entity escaper
+  function escapeHtml(str) {
+    return str
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+}
+

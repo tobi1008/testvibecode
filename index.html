@@ -1259,6 +1259,145 @@
       </svg>
     </button>
 
+    <!-- Floating Live Chat Widget (Temporary / Demo) -->
+    <div class="live-chat-wrapper" id="live-chat-wrapper">
+      <!-- Chat Toggle Button -->
+      <button class="live-chat-toggle" id="live-chat-toggle" aria-label="Mở khung live chat tư vấn">
+        <span class="chat-toggle-pulse"></span>
+        <span class="chat-unread-dot"></span>
+        <!-- Chat Icon -->
+        <svg class="chat-icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <!-- Close Icon -->
+        <svg class="chat-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Live Chat Popup Window -->
+      <div class="live-chat-widget" id="live-chat-widget" role="dialog" aria-modal="false" aria-label="Khung chat trực tuyến">
+        <!-- Chat Header -->
+        <div class="chat-header">
+          <div class="chat-header-info">
+            <div class="chat-avatar-wrapper">
+              <div class="chat-avatar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <span class="chat-online-indicator" title="Đang trực tuyến"></span>
+            </div>
+            <div class="chat-title-group">
+              <div class="chat-title-row">
+                <h4>Kỹ sư DevOps CloudOps</h4>
+                <span class="chat-badge-temp">Bản Tạm</span>
+              </div>
+              <p class="chat-status"><span class="status-dot"></span> Trực tuyến 24/7 • Phản hồi tức thì</p>
+            </div>
+          </div>
+          <div class="chat-header-actions">
+            <button class="chat-action-btn" id="chat-clear-btn" title="Làm mới đoạn hội thoại" aria-label="Làm mới hội thoại">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path>
+                <path d="M21 3v5h-5"></path>
+                <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path>
+                <path d="M3 21v-5h5"></path>
+              </svg>
+            </button>
+            <button class="chat-action-btn" id="chat-close-btn" title="Đóng khung chat" aria-label="Đóng khung chat">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Chat Notification Banner -->
+        <div class="chat-banner">
+          <span>⚡ Khung chat tương tác tạm thời — Bạn có thể thử đặt câu hỏi về Kubernetes, CI/CD, chi phí Cloud!</span>
+        </div>
+
+        <!-- Chat Messages Container -->
+        <div class="chat-messages" id="chat-messages">
+          <div class="chat-timestamp" id="chat-start-time">Hôm nay</div>
+          
+          <!-- Bot Welcome Message -->
+          <div class="chat-msg bot">
+            <div class="msg-avatar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div class="msg-body">
+              <div class="msg-bubble">
+                <p>Xin chào quý khách! 👋 Tôi là kỹ sư trực tuyến từ đội ngũ <strong>CloudOps</strong>.</p>
+                <p>Tôi có thể hỗ trợ quý khách về hạ tầng Kubernetes, xây dựng CI/CD, tối ưu hóa chi phí AWS/GCP hoặc xử lý sự cố. Quý khách có thể chọn nhanh các câu hỏi bên dưới:</p>
+              </div>
+              <span class="msg-time">Vừa xong</span>
+            </div>
+          </div>
+
+          <!-- Quick Suggestion Chips -->
+          <div class="chat-quick-chips" id="chat-quick-chips">
+            <button type="button" class="quick-chip" data-query="Tư vấn triển khai cụm Kubernetes">
+              ☸️ Cụm Kubernetes
+            </button>
+            <button type="button" class="quick-chip" data-query="Xây dựng tự động hóa CI/CD">
+              🚀 Tự động hóa CI/CD
+            </button>
+            <button type="button" class="quick-chip" data-query="Báo giá và chi phí dịch vụ">
+              💰 Báo giá dịch vụ
+            </button>
+            <button type="button" class="quick-chip" data-query="Hỗ trợ xử lý sự cố khẩn cấp 24/7">
+              🆘 Sự cố khẩn cấp 24/7
+            </button>
+          </div>
+
+          <!-- Typing Indicator (hidden by default) -->
+          <div class="chat-msg bot chat-typing-indicator" id="chat-typing-indicator" style="display: none;">
+            <div class="msg-avatar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div class="msg-body">
+              <div class="msg-bubble typing-bubble">
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat Input Form -->
+        <form class="chat-input-area" id="chat-form">
+          <input 
+            type="text" 
+            id="chat-input" 
+            class="chat-input-field" 
+            placeholder="Nhập câu hỏi tư vấn DevOps..." 
+            autocomplete="off"
+            maxlength="400"
+          />
+          <button type="submit" class="chat-send-btn" id="chat-send-btn" aria-label="Gửi tin nhắn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
     <!-- Toast Notification -->
     <div class="toast-notification" id="toast-notification" role="status" aria-live="polite">
       <div class="toast-icon">
